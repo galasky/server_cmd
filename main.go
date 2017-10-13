@@ -32,7 +32,7 @@ func echo(w http.ResponseWriter, r *http.Request) {
 		reader := bufio.NewReader(os.Stdin)
 		fmt.Println("Il n'y a pas de faute ? : ")
 		text, _ := reader.ReadString('\n')
-		err = c.WriteMessage(mt, text)
+		err = c.WriteMessage(mt, []byte(text))
 		if err != nil {
 			log.Println("write:", err)
 			break
