@@ -11,7 +11,7 @@ import (
 	"fmt"
 )
 
-var addr = flag.String("addr", "localhost:8080", "http service address")
+var addr = flag.String("addr", "localhost:8484", "http service address")
 
 var upgrader = websocket.Upgrader{} // use default options
 
